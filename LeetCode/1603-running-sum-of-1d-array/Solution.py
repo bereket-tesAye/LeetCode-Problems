@@ -5,11 +5,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        result = []
-        total = 0
+        sm = 0
+        runningSum = []
+        length_of_arr = len(nums)
+        for i in range(length_of_arr):
+            sm+=nums[i]
+            runningSum.append(sm)
 
-        for num in nums:
-            total += num
-            result.append(total)
-
-        return result
+        return runningSum
